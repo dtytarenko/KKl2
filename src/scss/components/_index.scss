@@ -1,0 +1,21 @@
+@import "misc/mixins";
+@import "misc/env";
+@import "misc/mixins";
+@import "misc/adjustment";
+@import "misc/icons";
+
+// import components for index page
+@import "header";
+@import "intro";
+@import "aboutUs";
+@import "stats";
+@import "advantages";
+@import "gallery";
+@import "crypto";
+@import "profit";
+@import "reviews";
+@import "news";
+@import "faq";
+@import "events";
+
+@import "footer";
