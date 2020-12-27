@@ -11,11 +11,10 @@
 
 @font-face {
     font-display: swap;
-    font-family: GilroyRegular;
-    src: url("../fonts/GB/gilroy-regular.eot");
-    src: url("../fonts/GB/gilroy-regular.woff");
-    src: url("../fonts/GB/gilroy-regular.woff2") format("woff2");
-    src: url("../fonts/GB/gilroy-regular.ttf") format("truetype");
+    font-family: GilroyExtraBold;
+    src: url("../fonts/GB/Gilroy-ExtraBold.eot");
+    src: url("../fonts/GB/Gilroy-ExtraBold.woff");
+    src: url("../fonts/GB/Gilroy-ExtraBold.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -79,3 +78,34 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-display: swap;
+    font-family: MontserratMediumItalic;
+    src: url("../fonts/Montserrat/Montserrat-MediumItalic.eot");
+    src: url("../fonts/Montserrat/Montserrat-MediumItalic.woff");
+    src: url("../fonts/Montserrat/Montserrat-MediumItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Ubuntu;
+    src: url("../fonts/Ubuntu/Ubuntu-Regular.eot");
+    src: url("../fonts/Ubuntu/Ubuntu-Regular.woff");
+    src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: MontserratMedium;
+    src: url("../fonts/Montserrat/Montserrat-Medium.eot");
+    src: url("../fonts/Montserrat/Montserrat-Medium.woff");
+    src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+

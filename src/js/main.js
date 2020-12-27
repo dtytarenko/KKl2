@@ -6,12 +6,11 @@ Swiper.use([Navigation, Pagination]);
         document.addEventListener("DOMContentLoaded", function () {
             /* eslint-disable no-unused-vars */
             const mySwiper = new Swiper(".swiper-container", {
-                loop: false,
                 speed: 1000,
                 grabCursor: true,
                 mousewheelControl: true,
-                slidesPerView: "auto",
                 keyboardControl: true,
+                centeredSlides: true,
                 spaceBetween: 20,
                 autoplay: {
                     delay: 5000,
@@ -21,18 +20,32 @@ Swiper.use([Navigation, Pagination]);
                     type: "bullets",
                     clickable: true
                 },
-                breakpoints: {
-                    // when window width is >= 320px
-                    320: {
-                        slidesPerView: 1,
-                        spaceBetween: 20
-                    }
-                }
             });
             /* eslint-enable no-unused-vars */
         });
     };
 
+    const initializeSmoothlyScroll = () => {
+        document.addEventListener("DOMContentLoaded", function () {
+            const introButtonScroll = document.getElementById("intro__button-scroll");
+            const aboutUs = document.getElementById("aboutUs");
+
+            // html section of site
+            function toAboutUs() {
+                aboutUs.scrollIntoView({ block: "start", behavior: "smooth" });
+            }
+            // scroll functions
+
+            introButtonScroll.addEventListener("click", () => {    
+                toAboutUs();
+            });
+        });
+    };
+
+    /*global AOS*/
+    AOS.init();
+
     Slider();
+    initializeSmoothlyScroll();
 })();
 

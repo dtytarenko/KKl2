@@ -55,9 +55,8 @@ img {
   }
 }
 
-
 .container {
-  padding-top: 30px;
+  padding-top: 60px;
   padding-bottom: 60px;
   max-width: calc(100% - 40px);
   margin: 0 auto;
@@ -67,11 +66,14 @@ img {
 
   @include tablet{
     max-width: calc(100% - 80px);
+    padding-bottom: 100px;
+    padding-top: 100px;
   }
 
   @include desktop{
     max-width: 1050px;
-    padding-top: 60px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   @include designDesktop {
@@ -79,122 +81,52 @@ img {
   }
 }
 
-.defaultBtn {
-  border-radius: 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-  @include dFlexJccAic;
-
-  &-green {
-    background-image: linear-gradient(to right, #b1f9c6 0%, #4ee482 100%);
-    color: #261449;
-    font-family: $MontserratBold;
-    font-size: 12px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    min-height: 50px;
-  }
-}
-
-.defaultText {
-  color: #111111;
-  font-family: $MontserratRegular;
-  font-size: 14px;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 22px;
-
-  @include tablet{
-    font-size: 15px;
-    line-height: 24px;
-  }
-
-  @include designDesktop{
-    font-size: 16px;
-  }
-}
-
 .section__title {
   position: relative;
-  font-family: $MontserratBold;
+  font-family: $MontserratExtraBold;
   font-size: 24px;
   font-weight: 700;
   font-style: normal;
   letter-spacing: normal;
   line-height: 24px;
+  text-align: center;
+  margin-bottom: 20px;
 
   @include tablet{
     font-size: 36px;
-    line-height: 24px;
+    line-height: 36px;
+    margin-bottom: 60px;
   }
 
-  @include designDesktop{
-    font-size: 48px;
-    line-height: 48px;
+  @include desktop{
+    margin-bottom: 30px;
   }
 
-  &::before {
+  &::after {
     content: "";
     display: block;
-    position: absolute;
-    height: 5px;
-    background-image: linear-gradient(to right, #b1f9c6 0%, #4ee482 100%);
+    width: 45px;
+    height: 12px;
+    margin: 10px auto 0;
+    background-image: url("../img/icons/section__title.svg");
+    @include bgIcons;
+
+    @include tablet{
+      width: 60px;
+      height: 16px;
+      margin-top: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
   }
 
   &-white {
-    padding-bottom: 20px;
-    margin-bottom: 24px;
     color: #ffffff;
-    text-align: center;
-
-    @include tablet{
-      padding-bottom: 27px;
-    }
-
-    @include designDesktop{
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-    }
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-    }
   }
 
   &-purple {
-    padding-top: 20px;
-    margin-bottom: 15px;
-    text-align: left;
-    color: #261449;
-
-    @include tablet{
-      margin-bottom: 28px;
-    }
-
-    @include desktop{
-      margin-bottom: 22px;
-      padding-top: 18px;
-    }
-
-    @include designDesktop {
-      margin-bottom: 40px;
-      padding-top: 20px;
-    }
-
-    &::before {
-      top: 0;
-      left: 0;
-      width: 40px;
-    }
+    color: #712076;
   }
 }
 
@@ -204,37 +136,22 @@ img {
   font-weight: 400;
   font-style: normal;
   letter-spacing: normal;
-  line-height: normal;
+  line-height: 24px;
+  text-align: center;
   margin-bottom: 28px;
 
   @include tablet{
     font-size: 20px;
+    line-height: 30px;
     margin-bottom: 36px;
   }
 
-  @include desktop{
-    margin-bottom: 56px;
+  &-grey {
+    color: #666666;
   }
 
-  @include designDesktop{
-    margin-bottom: 75px;
-    font-size: 24px;
-    line-height: 34px;
-  }
-
-  &-left {
-    color: #6e7694;
-    text-align: left;
-
-    @include designDesktop{
-      padding-right: 445px;
-    }
-  }
-
-  &-center {
-    opacity: 0.5;
+  &-white {
     color: #ffffff;
-    text-align: center;
   }
 }
 
@@ -250,59 +167,21 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-  border-radius: 30px;
-  background-color: #ffffff;
-  min-height: 250px;
-  padding: 22px 20px 24px 20px;
 
   @include tablet{
     width: calc(50% - 15px);
   }
-
-  &::before {
-    content: "";
-    display: block;
-    min-width: 60px;
-    max-width: 60px;
-    max-height: 60px;
-    min-height: 60px;
-    @include bgIcons;
-    margin-bottom: 20px;
-
-    @include tablet{
-      min-width: 80px;
-      max-width: 80px;
-      max-height: 80px;
-      min-height: 80px;
-    }
-  }
-
-  &:not(:last-of-type) {
-    margin-bottom: 20px;
-
-    @include tablet{
-      margin-bottom: 30px;
-    }
-  }
-
-  &:nth-last-child(-n+2){
-    @include tablet{
-      margin-bottom: 0;
-    }
-  }
 }
 
 .defaultList__item_title {
-  color: #261449;
   font-family: $MontserratBold;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   font-style: normal;
   line-height: normal;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.35px;
+  letter-spacing: 0.4px;
   position: relative;
   padding-bottom: 10px;
   margin-bottom: 20px;
@@ -318,7 +197,7 @@ img {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    background-image: linear-gradient(to right, #4ee482 0%, #b1f9c6 50%, #4ee482 100%);
+    background-color: #b090c2;
     width: 60px;
     height: 2px;
   }
@@ -326,10 +205,13 @@ img {
 
 .defaultList__item_text {
   text-align: center;
-}
-
-.aboutUs__list {
-  margin-bottom: 30px;
+  font-family: $MontserratRegular;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 20px;
+  text-align: center;
 }
 
 .aboutUs__list_item,
@@ -381,117 +263,9 @@ img {
   }
 }
 
-.swiper-container,
-.swiper-container-multiple {
-  max-width: 280px;
-  margin: 0 auto;
-  
-  @include tablet{
-    max-width: 690px;
-  }
 
-  @include desktop{
-    max-width: 1070px;
-    width: 100%;
-  }
+.reviews__item{
 
-  @include desktop{
-    max-width: 1400px;
-  }
-}
-
-.swiper-container-multiple{
-  overflow: visible;
-
-}
-
-
-.defaultSlider__list {
-  margin-bottom: 18px;
-
-  &_item {
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    background-color: #ffffff;
-    max-width: 280px;
-    position: relative;
-
-    @include tablet{
-      max-width: initial;
-    }
-  }
-
-  .defaultSlider__list_item_container {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 27px;
-  }
-
-  .defaultSlider__list_item_img {
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    margin-bottom: 20px;
-    max-height: 140px;
-    width: 100%;
-    object-fit: cover;
-    z-index: 2;
-
-    @include desktop{
-      max-height: 240px;
-      margin-bottom: 30px;
-    }
-  }
-
-  .defaultSlider__list_item_title {
-    color: #261449;
-    font-family: $MontserratBold;
-    font-size: 14px;
-    font-weight: 700;
-    text-align: left;
-    text-transform: uppercase;
-    letter-spacing: 0.35px;
-    line-height: normal;
-    margin-bottom: 20px;
-
-    @include desktop{
-      font-size: 16px;
-      letter-spacing: 0.4px;
-      margin-bottom: 30px;
-    }
-
-    @include designDesktop{
-      font-size: 20px;
-      letter-spacing: 0.5px;
-      margin-bottom: 36px;
-    }
-  }
-
-  .defaultSlider__list_item_date {
-    display: flex;
-    align-items: center;
-    color: #50e584;
-    font-family: $OpenSansBold;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: left;
-    letter-spacing: 1.4px;
-    position: relative;
-    margin-bottom: 20px;
-
-    &::before {
-      content: "";
-      display: inline-block;
-      margin-right: 20px;
-      background-image: linear-gradient(to right, #b1f9c6 0%, #4ee482 100%);
-      width: 40px;
-      height: 3px;
-    }
-
-    @include desktop{
-      margin-bottom: 32px;
-    }
-  }
 }
 
 .swiper-pagination {
@@ -505,20 +279,21 @@ img {
   justify-content: center;
   align-items: center;
   -webkit-tap-highlight-color: transparent;
+  background-color: #b090c2;
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 24px;
   height: 24px;
-  border: 1px solid #261449;
-  background-color: #ffffff;
+  border: 1px solid #b090c2;
+  background-color: transparent;
 
   &::before {
     display: block;
     content: "";
     width: 8px;
     height: 8px;
-    background-color: #261449;
+    background-color: #6900a6;
     border-radius: 100%;
   }
 }

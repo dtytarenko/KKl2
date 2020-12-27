@@ -1,45 +1,33 @@
 .intro{
     position: relative;
-    background-image: url('../img/photos/intro__bg_tablet.svg');
+    background-image: url('../img/photos/1__320.svg');
     background-size: cover;
-    background-position: -140px 0px;
     background-repeat: no-repeat;
-    padding-top: 40px;
-
-    .container{
-        position: relative;
-    }
-
-    @media screen and (min-width: 350px){
-        background-position: -80px 0px;
-    }
-
-    @media screen and (min-width: 380px){
-        background-position: -40px 0px;
-    }
-
-    @media screen and (min-width: 420px){
-        background-position: 0px 0px;
-    }
 
     @include tablet{
-        padding-top: 50px;
-        min-height: 1000px;
+        background-image: url('../img/photos/1__768.svg');
     }
 
     @include desktop{
-        background-image: url('../img/photos/intro__desktop.svg');
-        padding-top: 130px;
+        background-image: url('../img/photos/1__1440.svg');
     }
 
     @include designDesktop{
-        max-height: 1046px;
+        background-image: url('../img/photos/1__1920.svg');
     }
 
     .container{
-        padding-bottom: 0px;
+        position: relative;
+        padding-top: 30px;
+        padding-bottom: 275px;
 
         @include tablet{
+            padding-bottom: 560px;
+        }
+
+        @include desktop{
+            padding-top: 100px;
+            padding-bottom: 127px;
             align-items: flex-start;
         }
     }
@@ -48,20 +36,26 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 220px;
-        height: 81px;
-        margin: 0 auto 40px;
+        width: 137px;
+        height: 50px;
+        margin: 0 auto 30px;
         
         @include tablet{
+            margin-bottom: 60px;
+            width: 218px;
+            height: 80px;
+        }
+
+        @include desktop{
+            width: 270px;
+            height: 99px;
+            margin-bottom: 78px;
             margin-left: 0;
-            margin-bottom: 85px;
-            width: 330px;
-            height: 122px;
         }
 
         @include designDesktop{
-            width: 440px;
-            height: 162px;
+            width: 360px;
+            height: 132px;
             margin-bottom: 96px;
         }
         
@@ -79,52 +73,53 @@
         text-transform: uppercase;
         letter-spacing: 0.9px;
         color: #ffffff;
-        font-family: $MontserratBold;
-        padding-bottom: 20px;
+        font-family: $MontserratBlack;
         position: relative;
-        margin-bottom: 23px;
+        margin-bottom: 20px;
+        display: block;
+        flex-direction: column;
+        justify-content: center;
 
         @include tablet{
             color: #ffffff;
             font-size: 50px;
-            line-height: 50px;
-            text-align: left;
+            line-height: 56px;
             letter-spacing: 1.25px;
             white-space: initial;
-            margin-bottom: 100px;
+            margin-bottom: 73px;
         }
 
         @include desktop{
-            font-size: 60px;
-            font-weight: 400;
-            line-height: 90px;
+            font-size: 56px;
+            letter-spacing: 1.4px;
+            margin-bottom: 113px;
+            max-width: 574px;
+            white-space: initial;
             text-align: left;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 90px;
         }
 
         @include designDesktop{
-            font-size: 70px;
-            letter-spacing: normal;
-            margin-bottom: 60px;
+            max-width: 701px;
+            margin-bottom: 78px;
         }
 
         &::after{
             display: block;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative;
+            margin: 20px auto 0;
             content: '';
-            width: 80px;
-            height: 10px;
-            background-color: #601472;
-            background-image: linear-gradient(to right, #b1f9c6 0%, #4ee482 100%);
-
+            width: 75px;
+            height: 25px;
+            background-image: url("../img/icons/section__title.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            
             @include tablet{
-                left: 0;
-                transform: initial;
+                width: 90px;
+            }
+
+            @include desktop{
+                margin: 30px 0 0;
             }
         }
     }
@@ -133,112 +128,95 @@
         color: #ffffff;
         font-size: 18px;
         font-style: normal;
-        font-family: $MontserratSemiBold;
+        font-family: $MontserratRegular;
         line-height: normal;
         text-align: center;
         letter-spacing: 0.9px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 
         @include tablet{
             font-size: 24px;
-            font-weight: 400;
-            text-align: left;
+            font-weight: 500;
             letter-spacing: 1.2px;
-            margin-bottom: 85px;
+            margin-bottom: 45px;
         }
 
         @include desktop{
-            font-size: 30px;
-            font-weight: 400;
-            letter-spacing: 1.5px;
-            margin-bottom: 73px;
-            max-width: 811px;
+            letter-spacing: 1.4px;
+            margin-bottom: 55px;
+            max-width: 644px;
+            font-size: 28px;
+            text-align: left;
         }
 
         @include designDesktop{
-            font-size: 40px;
-            letter-spacing: 2px;
-            max-width: 1082px;
-            margin-bottom: 92px;
-        }
-    }
-
-    .intro__button {
-        margin-bottom: 130px;
-
-        @include tablet{
-            margin-bottom: 241px;
-            min-width: 240px;
+            font-size: 36px;
+            letter-spacing: 1.8px;
+            max-width: 828px;
+            margin-bottom: 73px;
         }
     }
 }
 
 .intro__button-scroll{
-    display: none;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    animation: bounce 1s infinite alternate;
+    transition: all 0.3s ease-in-out;
 
-    @include tablet{
-        display: flex;
-        position: absolute;
-        bottom: 0;
-        right: 100px;
-        transform: translate(0, 0%) rotate(-90deg);
-        background-color: transparent;
-        appearance: none;
-        animation: bounce 1s infinite alternate;
-
-        &::before{
-            content: '';
-            display: block;
-            background-image: url('../img/icons/scroll.png');
-            @include bgIcons;
-            width: 50px;
-            height: 50px;
-            transform: rotate(90deg);
-        }
-
-        &::after{
-            content: '';
-            display: block;
-            width: 3px;
-            height: 50px;
-            background-color: #261449;
-            position: absolute;
-            top: 50%;
-            left: 82px;
-            transform: translate(0, -50%) rotate(90deg);
-        }
+    &:hover{
+        opacity: 0.7;
     }
 
     @include desktop{
-        justify-content: center;
-        align-items: center;
-        right: 50px;
-        bottom: 145px;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
 
-        &::after{
-            height: 40px;
-            left: 100%;
+    &::before{
+        display: block;
+        content: '';
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        background-image: url("../img/icons/intro__button.png");
+        @include bgIcons;
+
+        @include tablet{
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+        }
+
+        @include designDesktop{
+            width: 70px;
+            height: 70px;
         }
     }
 
-    @include designDesktop {
-        bottom: 200px;
-    }
-
     span{
-        display: none;
+        color: #ffc000;
+        font-family: $Ubuntu;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: normal;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
 
-        @include desktop{
-            display: block;
-            color: #261449;
-            font-family: $MontserratSemiBold;
-            font-size: 14px;
-            font-weight: 400;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 2.8px;
-            margin-left: 15px;
-            margin-right: 30px;
+        @include tablet{
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        @include designDesktop{
+            font-size: 24px;
+            letter-spacing: 1.2px;
         }
     }
 }

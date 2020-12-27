@@ -1,23 +1,14 @@
-.infoStats{
-    background-image: url('../img/photos/infoStats.svg');
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @include tablet{
-        background-image: url("../img/photos/infoStats__tablet.svg");
-    }
-
-    @include desktop{
-        background-image: url("../img/photos/infoStats__desktop.svg");
-        background-position: center center;
-        padding-top: 167px;
+.stats{
+    .container{
+        @include tablet{
+            padding-top: 0;
+        }
     }
 }
 
-.stats{
+.stats__subtitle{
     @include tablet{
-        padding-top: 80px;
+        margin-bottom: 46px;
     }
 }
 
@@ -27,19 +18,17 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
-    
 }
 
 .stats__list_item{
     text-align: center;
 
     @include tablet{
-        max-width: calc(50% - 40px);
+        width: calc(50% - 40px);
     }
 
     @include desktop{
-        max-width: 205px;     
+        max-width: 205px; 
     }
 
     @include designDesktop{
@@ -56,28 +45,21 @@
 }
 
 .stats__list_item_title{
-    color: #ffffff;
+    color: #712076;
     font-family: $GilroyBlack;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 400;
     font-style: normal;
     letter-spacing: normal;
     line-height: normal;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 15px;
     position: relative;
-    margin-bottom: 11px;
 
     @include tablet{
-        padding-top: 30px;
         font-size: 50px;
+        letter-spacing: 2.5px;
         text-align: left;
-        margin-bottom: 14px;
-    }
-
-    @include designDesktop{
-        font-size: 60px;
-        letter-spacing: 3px;
     }
 
     &::before{
@@ -89,7 +71,7 @@
         transform: translateX(-50%);
         width: 40px;
         height: 5px;
-        background-image: linear-gradient(to right, #b1f9c6 0%, #4ee482 100%);
+        background-color: #ffb759;
 
         @include tablet{
             left: 0;
@@ -101,22 +83,22 @@
         content: '+';
         display: inline-block;
         margin-left: 20px;
-        color: #4ee482;
-        letter-spacing: 2.4px;
+        color: #712076;
+        letter-spacing: 1.8px;
     }
 }
 
 .stats__list_item_subtitle{
-    color: #4ee482;
-    font-family: $GilroyRegular;
-    font-size: 14px;
+    color: #ffb759;
+    font-family: $GilroyExtraBold;
+    font-size: 16px;
     font-weight: 700;
     font-style: normal;
     line-height: normal;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 14px;
-    letter-spacing: 2.8px;
+    margin-bottom: 15px;
+    letter-spacing: 3.2px;
 
     @include tablet{
         font-size: 16px;
@@ -132,9 +114,9 @@
 }
 
 .stats__list_item_descr{
-    color: #ffffff;
+    color: #333333;
     font-family: $MontserratRegular;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     font-style: normal;
     letter-spacing: normal;

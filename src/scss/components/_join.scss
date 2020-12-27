@@ -1,0 +1,318 @@
+.join{
+    @include desktop{
+        background-image: url("../img/photos/2__1440.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 1087px;
+        position: relative;
+        top: -250px;
+        margin-bottom: -200px;
+    }
+
+    @include designDesktop{
+        margin-bottom: -222px;
+        background-position: -100px 0;
+    }
+
+    .sections__container{
+        @include desktop{
+            padding-top: 390px;
+        }
+
+        @include designDesktop{
+            padding-top: 450px;
+            padding-bottom: 320px;
+        }
+    }
+}
+
+.reg{
+    background-image: linear-gradient(60deg, #111843 0%, #460362 42%, #ffb759 100%);
+
+    @include desktop{
+        background-image: initial;
+        max-width: 450px;
+    }
+
+    .container{
+        @include desktop{
+            padding-top: 0;
+            padding-bottom: 0;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.reg__title{
+    @include desktop{
+        text-align: left;
+        margin-bottom: 30px;
+        font-size: 36px;
+
+        &::after{
+            margin-left: 0;
+        }
+    }
+}
+
+.reg__subtitle{
+    @include desktop{
+        text-align: left;
+        margin-bottom: 46px;
+        font-size: 20px;
+    }
+}
+
+.sections__container{
+    @include desktop{
+        max-width: 1051px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.reg__form{
+    @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @include desktop{
+        max-width: 330px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+.reg__form_wrap{
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    transform-style: preserve-3d;
+
+    @include tablet{
+        margin-bottom: 30px;
+    }
+
+    @include desktop{
+        margin-bottom: 10px;
+
+        &:nth-of-type(2){
+            margin-bottom: 20px;
+        }
+    }
+
+    &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 5px;
+        z-index: 1;
+        transform: translateZ(-1px);
+    }
+
+    &-input{
+        height: 55px;
+
+        &::after{
+            top: 5px;
+            height: 50px;
+            border-radius: 0 25px;
+            background-color: #ffffff;
+            opacity: 0.1;
+
+            @include tablet{
+                top: 10px;
+                left: 10px;
+                height: 60px;
+            }
+
+            @include desktop{
+                top: 0px;
+                left: 5px;
+            }
+        }
+
+        @include tablet{
+            height: 60px;
+            width: calc(50% - 20px);
+        }
+
+        @include desktop{
+            width: 100%;
+        }
+    }
+
+    &-submit{
+        height: 60px;
+        
+        &::after{
+            top: 4px;
+            height: 60px;
+            border-radius: 0 30px;
+            background-color: #ffb759;
+        }
+
+        @include tablet{
+            width: 100%;
+        }
+    }
+}
+
+.reg__input{
+    height: 50px;
+    width: 100%;
+    appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    z-index: 100;
+
+    &-name,
+    &-email{
+        color: #6e7694;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        padding-left: 20px;
+        border-radius: 0 25px;
+        background-color: #ffffff;
+
+        @include placeholder{
+            font-family: $MontserratMediumItalic;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            letter-spacing: 1.05px;
+        }
+    }
+
+    &-submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 30px;
+        border-top: 3px solid #ffb759;
+        border-left: 3px solid #ffb759;
+        background-color: #410361;
+        color: #ffc000;
+        font-family: $MontserratExtraBold;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1.05px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+            cursor: pointer;
+            color: #410361;
+            background-color: #ffc000;
+        }
+    }
+}
+
+.reg__text{
+    opacity: 0.3;
+    color: #ffffff;
+    font-family: $MontserratRegular;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.6px;
+
+    @include desktop{
+        max-width: 310px;
+        margin-top: 20px;
+        text-align: left;
+    }
+}
+
+.members{
+    @include desktop{
+        max-width: 356px;
+    }
+
+    .container{
+        @include tablet{
+            padding-bottom: 80px;
+        }
+
+        @include desktop{
+            padding-top: 0;
+            padding-bottom: 0;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.members__title{
+    @include desktop{
+        text-align: left;
+        margin-bottom: 30px;
+        font-size: 36px;
+
+        &::after{
+            margin-left: 0;
+        }
+    }
+}
+
+.members__subtitle{
+    margin-bottom: 34px;
+
+    @include desktop{
+        text-align: left;
+        margin-bottom: 46px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.members__table{
+    @include tablet{
+        max-width: 363px;
+        min-width: 363px;
+        margin: 0 auto;
+    }
+
+    .time{
+        color: #7b829c;
+        font-family: $MontserratMedium;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        font-weight: 500;
+
+        @include desktop{
+            font-size: 16px;
+            line-height: 32px;
+            letter-spacing: 0.4px;
+        }
+    }
+
+    .name{
+        color: #111111;
+        font-family: $MontserratSemiBold;
+        font-size: 15px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 24px;
+        text-align: left;
+
+        @include desktop{
+            font-size: 16px;
+            line-height: 32px;
+            letter-spacing: 0.4px;
+        }
+    }
+}
