@@ -25,7 +25,7 @@
 
     @include designDesktop{
         &::before{
-            width: 870px;
+            width: 980px;
         }
     }
 
@@ -266,6 +266,10 @@
         max-width: 356px;
     }
 
+    @include designDesktop{
+        max-width: 475px;
+    }
+
     .container{
         @include tablet{
             padding-bottom: 80px;
@@ -308,6 +312,12 @@
         max-width: 363px;
         min-width: 363px;
         margin: 0 auto;
+    }
+
+    @include designDesktop{
+        max-width: 384px;
+        min-width: 384px;
+        margin-left: 0;
     }
 
     .time{
