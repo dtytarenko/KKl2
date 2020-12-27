@@ -221,6 +221,11 @@
             transform: translate(0);
         }
     }
+
+    @include designDesktop{
+        font-size: 20px;
+        letter-spacing: 0.5px;
+    }
 }
 
 .advantages__list_item_text {
@@ -232,5 +237,10 @@
 
     @include desktop {
         font-size: 15px;
+    }
+
+    @include designDesktop{
+        font-size: 16px;
+        line-height: 24px;
     }
 }

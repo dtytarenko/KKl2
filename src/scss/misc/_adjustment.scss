@@ -31,11 +31,11 @@ img {
   transform: translate3d(0, -100%, 0);
 }
 
-.scroll-down .header.sticky.active{
+.scroll-down .header.sticky.active {
   transform: translate3d(0, 0%, 0);
 }
 
-.overlay{
+.overlay {
   opacity: 0;
   position: absolute;
   left: 0;
@@ -43,10 +43,10 @@ img {
   transform: translateX(-200%);
 }
 
-.overlay{
+.overlay {
   z-index: 60;
 
-  &.active{
+  &.active {
     width: 100%;
     height: 100%;
     background: rgba(14, 14, 14, 0.6);
@@ -64,13 +64,13 @@ img {
   flex-direction: column;
   justify-content: center;
 
-  @include tablet{
+  @include tablet {
     max-width: calc(100% - 80px);
     padding-bottom: 100px;
     padding-top: 100px;
   }
 
-  @include desktop{
+  @include desktop {
     max-width: 1050px;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -92,14 +92,19 @@ img {
   text-align: center;
   margin-bottom: 20px;
 
-  @include tablet{
+  @include tablet {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 60px;
   }
 
-  @include desktop{
+  @include desktop {
     margin-bottom: 30px;
+  }
+
+  @include designDesktop {
+    font-size: 48px;
+    line-height: 48px;
   }
 
   &::after {
@@ -111,7 +116,7 @@ img {
     background-image: url("../img/icons/section__title.svg");
     @include bgIcons;
 
-    @include tablet{
+    @include tablet {
       width: 60px;
       height: 16px;
       margin-top: 15px;
@@ -140,7 +145,7 @@ img {
   text-align: center;
   margin-bottom: 28px;
 
-  @include tablet{
+  @include tablet {
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 36px;
@@ -156,7 +161,7 @@ img {
 }
 
 .defaultList {
-  @include tablet{
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -168,7 +173,7 @@ img {
   flex-direction: column;
   align-items: center;
 
-  @include tablet{
+  @include tablet {
     width: calc(50% - 15px);
   }
 }
@@ -186,7 +191,7 @@ img {
   padding-bottom: 10px;
   margin-bottom: 20px;
 
-  @include tablet{
+  @include tablet {
     font-size: 16px;
   }
 
@@ -227,14 +232,13 @@ img {
   line-height: normal;
   text-align: left;
 
-  @include desktop{
+  @include desktop {
     font-size: 16px;
-}
+  }
 
-  @include designDesktop{
+  @include designDesktop {
     font-size: 18px;
   }
-  
 
   &:not(:last-of-type) {
     margin-bottom: 20px;
@@ -250,11 +254,11 @@ img {
     margin-right: 10px;
     @include bgIcons;
 
-    @include desktop{
+    @include desktop {
       margin-right: 20px;
     }
 
-    @include designDesktop{
+    @include designDesktop {
       min-width: 80px;
       min-height: 80px;
       max-width: 80px;
@@ -263,9 +267,7 @@ img {
   }
 }
 
-
-.reviews__item{
-
+.reviews__item {
 }
 
 .swiper-pagination {
@@ -295,5 +297,125 @@ img {
     height: 8px;
     background-color: #6900a6;
     border-radius: 100%;
+  }
+}
+
+.overlay,
+.modal {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-200%);
+}
+
+.overlay {
+  z-index: 97;
+
+  &.active {
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 14, 14, 0.6);
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.modal {
+  z-index: 100;
+
+  &.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 14, 14, 0.6);
+    opacity: 1;
+    transform: translateX(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal__videoWrapper {
+    width: calc(100% - 40px);
+    min-height: 158px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include bigMobile{
+      min-height: 210px;
+    }
+
+    @include preTablet{
+      min-height: 300px;
+    }
+
+    @include tablet {
+      max-width: calc(100% - 80px);
+      min-height: 389px;
+    }
+
+    @include desktop {
+      max-width: 1050px;
+      min-height: 520px;
+      height: 520px;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      @include desktop{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        max-height: 600px;
+        transform: translateY(-50%);
+        top: 50%;
+      }
+
+      @include designDesktop{
+        max-height: 750px;
+      }
+    }
+  }
+}
+
+.modal__close{
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -20px;
+  right: -20px;
+  background-image: url("../img/icons/close-pic.png");
+  @include bgIcons;
+  transition: all 0.3s ease-in-out;
+
+  &:hover{
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  @include desktop{
+    top: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  @media screen and (min-width: 1300px){
+    top: 10%;
+  }
+
+  @include designDesktop{
+    top: 15%;
   }
 }

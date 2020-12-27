@@ -9,10 +9,14 @@
     }
 
     @include desktop{
+        min-height: 100vh;
+        background-size: cover;
         background-image: url('../img/photos/1__1440.svg');
     }
 
     @include designDesktop{
+        background-size: cover;
+        background-position: center;
         background-image: url('../img/photos/1__1920.svg');
     }
 
@@ -26,9 +30,16 @@
         }
 
         @include desktop{
-            padding-top: 100px;
-            padding-bottom: 127px;
+            padding-bottom: 305px;
             align-items: flex-start;
+        }
+
+        @media screen and (min-width: 1400px){
+            padding-top: 70px;
+        }
+
+        @include designDesktop{
+            padding-top: 100px;
         }
     }
 
@@ -49,8 +60,12 @@
         @include desktop{
             width: 270px;
             height: 99px;
-            margin-bottom: 78px;
+            margin-bottom: 30px;
             margin-left: 0;
+        }
+
+        @media screen and (min-width: 1400px){
+            margin-bottom: 78px;
         }
 
         @include designDesktop{
@@ -90,12 +105,15 @@
         }
 
         @include desktop{
-            font-size: 56px;
-            letter-spacing: 1.4px;
-            margin-bottom: 113px;
+            margin-bottom: 60px;
             max-width: 574px;
             white-space: initial;
             text-align: left;
+        }
+
+        @media screen and (min-width: 1400px){
+            font-size: 56px;
+            letter-spacing: 1.4px;
         }
 
         @include designDesktop{

@@ -2,6 +2,9 @@ import Swiper, { Navigation, Pagination } from "swiper";
 Swiper.use([Navigation, Pagination]);
 
 (() => {
+    const overlay = document.getElementById("overlay");
+    const modal = document.getElementById("modal");
+
     const Slider = () => {
         document.addEventListener("DOMContentLoaded", function () {
             /* eslint-disable no-unused-vars */
@@ -42,9 +45,41 @@ Swiper.use([Navigation, Pagination]);
         });
     };
 
+    const showModal = () => {
+        document.addEventListener("DOMContentLoaded", function () {
+            const showVideoButtons = Array.from(document.getElementsByClassName("reviews__item_video"));
+           
+            function showVideo(event){
+                event.preventDefault();
+                overlay.classList.add("active");
+                modal.classList.add("active");
+            }
+
+            showVideoButtons.forEach(element => element.addEventListener("click", showVideo, false));
+        });
+    };
+
+    const hideModal = () => {
+        document.addEventListener("DOMContentLoaded", function () {
+            const modalClose = document.getElementById("modal__close");
+
+            function hideVideo(){
+                overlay.classList.remove("active");
+                modal.classList.remove("active");
+            }
+
+            modalClose.addEventListener("click", hideVideo, false);
+            modalClose.addEventListener("touchstart", hideVideo, false);
+            modal.addEventListener("click", hideVideo, false);
+            modal.addEventListener("touchstart", hideVideo, false);
+        });
+    };
+
     /*global AOS*/
     AOS.init();
 
+    hideModal();
+    showModal();
     Slider();
     initializeSmoothlyScroll();
 })();

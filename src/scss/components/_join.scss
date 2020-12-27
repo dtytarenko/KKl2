@@ -7,11 +7,15 @@
         position: relative;
         top: -250px;
         margin-bottom: -200px;
+        background-position: -100px -25px;
+    }
+
+    @media screen and (min-width: 1400px){
+        background-position: -185px -25px;
     }
 
     @include designDesktop{
         margin-bottom: -222px;
-        background-position: -100px 0;
     }
 
     .sections__container{
@@ -155,6 +159,13 @@
             height: 60px;
             border-radius: 0 30px;
             background-color: #ffb759;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover{
+            &::after{
+                opacity: 0;
+            }
         }
 
         @include tablet{
@@ -213,7 +224,7 @@
         &:hover{
             cursor: pointer;
             color: #410361;
-            background-color: #ffc000;
+            background-color: #ffb759;
         }
     }
 }

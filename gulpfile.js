@@ -67,7 +67,7 @@ function css() {
     }}))
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(rename({ suffix: ".min" }))
-    .pipe(postcss([autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
+    .pipe(postcss([autoprefixer(["last 15 versions", "> 1%", "ie 8", "ie 7"],
 		{ cascade: true }), cssnano()]))
     .pipe(gulp.dest("./dist/css/"))
     .pipe(browsersync.stream());
