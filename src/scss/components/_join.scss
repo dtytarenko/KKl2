@@ -1,31 +1,43 @@
 .join{
     @include desktop{
-        background-image: url("../img/photos/2__1440.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 1087px;
         position: relative;
-        top: -250px;
-        margin-bottom: -200px;
-        background-position: -100px -25px;
+
+        &::before{
+            content: '';
+            display: block;
+            width: 750px;
+            height: 1129px;
+            position: absolute;
+            left: 0;
+            top: -200px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left center;
+            background-image: url("../img/photos/back-form-1.png");
+        }
     }
 
     @media screen and (min-width: 1400px){
-        background-position: -185px -25px;
+        &::before{
+            width: 800px;
+        }
     }
 
     @include designDesktop{
-        margin-bottom: -222px;
+        &::before{
+            width: 870px;
+        }
     }
 
     .sections__container{
         @include desktop{
-            padding-top: 390px;
+            padding-top: 252px;
+            padding-bottom: 120px;
         }
 
         @include designDesktop{
-            padding-top: 450px;
-            padding-bottom: 320px;
+            padding-top: 268px;
+            padding-bottom: 150px;
         }
     }
 }
@@ -74,6 +86,10 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+    }
+
+    @include designDesktop{
+        max-width: 1400px;
     }
 }
 

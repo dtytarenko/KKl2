@@ -437,12 +437,22 @@
         }
     }
 
+    @include designDesktop{
+        &::after{
+            width: 1050px;
+            height: 1290px;
+            background-image: url("../img/photos/back-form-2.png");
+            background-repeat: no-repeat;
+            background-position: 60px 0;
+        }
+    }
+
     .container{
         @include desktop{
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 0;
+            padding-bottom: 168px;
         }
     }
 }
@@ -455,7 +465,7 @@
     }
 
     @include designDesktop{
-        width: 352px;
+        width: 469px;
     }
 }
 
@@ -483,6 +493,10 @@
     @include desktop{
         z-index: 10;
         max-width: 510px;
+    }
+
+    @include designDesktop{
+        max-width: 680px;
     }
 }
 
@@ -539,19 +553,19 @@
     }
 
     &:nth-of-type(1)::before {
-        background-image: url("../img/icons/7.png");
+        background-image: url("../img/icons/7.svg");
     }
 
     &:nth-of-type(2)::before {
-        background-image: url("../img/icons/8.png");
+        background-image: url("../img/icons/8.svg");
     }
 
     &:nth-of-type(3)::before {
-        background-image: url("../img/icons/9.png");
+        background-image: url("../img/icons/9.svg");
     }
 
     &:nth-of-type(4)::before {
-        background-image: url("../img/icons/10.png");
+        background-image: url("../img/icons/10.svg");
     }
 
     @include tablet {
@@ -567,10 +581,18 @@
 
 .profit__list_item_title {
     color: #712076;
+
+    @include designDesktop{
+        font-size: 20px;
+    }
 }
 
 .profit__list_item_text {
     color: #111111;
+
+    @include designDesktop{
+        font-size: 16px;
+    }
 }
 
 .profit__btn {

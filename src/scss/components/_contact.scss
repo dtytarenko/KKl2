@@ -159,13 +159,13 @@
 
     &-tel{
         &::before{
-            background-image: url("../img/icons/contact__tel.png");
+            background-image: url("../img/icons/contact__tel.svg");
         }
     }
 
     &-email{
         &::before{
-            background-image: url("../img/icons/contact__email.png");
+            background-image: url("../img/icons/contact__email.svg");
         }
 
         @include desktop{
