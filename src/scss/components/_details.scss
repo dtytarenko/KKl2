@@ -69,6 +69,7 @@
 .reviews__list {
     margin-bottom: 18px;
     max-width: 280px;
+    overflow: visible;
 
     @include tablet {
         max-width: 700px;
@@ -76,6 +77,12 @@
 
     @include desktop{
         max-width: 880px;
+    }
+}
+
+.reviews{
+    .swiper-container{
+        overflow: visible;
     }
 }
 
@@ -87,6 +94,9 @@
     position: relative;
     left: -16px;
     transform-style: preserve-3d;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: all 0.3s ease-in;
 
     &::after {
         content: "";
@@ -114,6 +124,9 @@
     }
 }
 
+.reviews__item.swiper-slide-active{
+    opacity: 1;
+}
 .reviews__item_info {
     display: grid;
     grid-template-columns: 70px 1fr;
@@ -277,8 +290,8 @@
     &:nth-of-type(1) {
         .social__list__item_link {
             &:nth-of-type(1) {
-                background-image: url("../img/icons/facebook.png");
-                background-size: 11px 20px;
+                background-image: url("../img/icons/icon-fb.svg");
+                background-size: 17px 20px;
             }
         }
     }
@@ -286,7 +299,7 @@
     &:nth-of-type(2) {
         .social__list__item_link {
             &:nth-of-type(1) {
-                background-image: url("../img/icons/instagram.png");
+                background-image: url("../img/icons/icon-insta.svg");
                 background-size: 20px 20px;
             }
         }
@@ -295,7 +308,7 @@
     &:nth-of-type(3) {
         .social__list__item_link {
             &:nth-of-type(1) {
-                background-image: url("../img/icons/telegram.png");
+                background-image: url("../img/icons/icon-telegram.svg");
                 background-size: 20px 17px;
             }
         }
@@ -307,7 +320,7 @@
         &:nth-of-type(1) {
             .social__list__item_link {
                 &:nth-of-type(1) {
-                    background-image: url("../img/icons/facebook__hover.png");
+                    background-image: url("../img/icons/icon-fb-hover.svg");
                     background-size: 11px 20px;
                 }
             }
@@ -316,7 +329,7 @@
         &:nth-of-type(2) {
             .social__list__item_link {
                 &:nth-of-type(1) {
-                    background-image: url("../img/icons/instagram__hover.png");
+                    background-image: url("../img/icons/icon-insta-hover.svg");
                     background-size: 20px 20px;
                 }
             }
@@ -325,7 +338,7 @@
         &:nth-of-type(3) {
             .social__list__item_link {
                 &:nth-of-type(1) {
-                    background-image: url("../img/icons/telegram__hover.png");
+                    background-image: url("../img/icons/icon-telegram-hover.svg");
                     background-size: 20px 17px;
                 }
             }

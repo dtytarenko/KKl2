@@ -49,6 +49,7 @@
         height: 47px;
         display: block;
         @include bgIcons;
+        z-index: 2;
 
         @include tablet{
             width: 60px;
@@ -72,6 +73,7 @@
         border-radius: 0 25px;
         background-color: #ffffff;
         opacity: 0.2;
+        z-index: 1;
 
         @include tablet{
             width: 90px;
